@@ -152,7 +152,7 @@ export default function LoginPage() {
   );
 }
 
-const inputGroup = { display: 'flex', flexDirection: 'column', gap: '0.5rem' };
+const inputGroup = { display: 'flex', flexDirection: 'column' as const, gap: '0.5rem' };
 const labelStyle = { fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)' };
 const inputStyle = { 
   padding: '0.8rem', 

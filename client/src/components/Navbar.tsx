@@ -9,7 +9,7 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [selectedRegion, setSelectedRegion] = useState({ code: 'IN', flag: '🇮🇳', name: 'India' });
+  const [selectedRegion, setSelectedRegion] = useState({ code: 'IN', name: 'India' });
   const pathname = usePathname();
 
   const hideOnPaths = ['/login', '/dashboard'];
