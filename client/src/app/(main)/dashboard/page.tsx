@@ -18,7 +18,18 @@ export default function Dashboard() {
     { title: 'Injection Molding', icon: '🏗️', id: 'im' }
   ];
 
-  const handleContinue = () => {
+  const handleContinue = async () => {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+    console.log(`Connecting to API at: ${apiUrl}`);
+    
+    try {
+      const response = await fetch(`${apiUrl}/`);
+      const data = await response.json();
+      console.log('API Response:', data);
+    } catch (error) {
+      console.error('Failed to connect to API:', error);
+    }
+
     if (newProjectName && !projects.includes(newProjectName)) {
       setProjects([...projects, newProjectName]);
       setActiveProject(newProjectName);
