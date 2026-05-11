@@ -3,3 +3,7 @@ uvicorn[standard]
 python-multipart
 trimesh
 numpy
+motor
+bcrypt
+python-dotenv
+email-validator
