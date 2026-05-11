@@ -49,7 +49,7 @@ export default function ProductLifeCycle() {
               position: 'relative'
             }}>
               <div style={{ position: 'relative', width: '64px', height: '64px', marginBottom: '2rem' }}>
-                <Image src={step.icon} alt={step.title} fill style={{ objectFit: 'contain' }} />
+                <Image src={step.icon} alt={step.title} fill sizes="64px" style={{ objectFit: 'contain' }} />
               </div>
               <h3 style={{ fontSize: '1.5rem', color: '#111', marginBottom: '1.2rem', fontWeight: 700 }}>{step.title}</h3>
               <p style={{ fontSize: '1rem', color: '#555', lineHeight: '1.7', opacity: 0.9 }}>

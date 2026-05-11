@@ -26,3 +26,5 @@ server/uploads/
 # Python virtual env
 venv/
 .venv/
+venv-rmbg/
+client/venv-rmbg/
