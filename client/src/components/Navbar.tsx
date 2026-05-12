@@ -44,12 +44,12 @@ export default function Navbar() {
           { title: 'Advanced Photopolymers', desc: 'High-performance plastics' }
         ],
         'Sheet Metal Fabrication': [
-          { title: 'Laser Cutting', desc: 'Custom cut flat parts' },
-          { title: 'Punching', desc: 'Custom punched flat parts' },
-          { title: 'Forming and Bending', desc: 'Custom bent parts' },
-          { title: 'Fabricated Assemblies', desc: 'Custom assembled parts' },
-          { title: 'Prototyping', desc: 'Rapid prototyping' },
-          { title: 'Production', desc: 'Full-service production' }
+          { title: 'Laser Cutting', desc: 'Custom cut flat parts', href: '/services/sheet-metal-fabrication/laser-cutting' },
+          { title: 'Punching', desc: 'Custom punched flat parts', href: '/services/sheet-metal-fabrication/punching' },
+          { title: 'Forming and Bending', desc: 'Custom bent parts', href: '/services/sheet-metal-fabrication/forming-bending' },
+          { title: 'Fabricated Assemblies', desc: 'Custom assembled parts', href: '/services/sheet-metal-fabrication/fabricated-assemblies' },
+          { title: 'Prototyping', desc: 'Rapid prototyping', href: '/services/sheet-metal-fabrication/prototyping' },
+          { title: 'Production', desc: 'Full-service production', href: '/services/sheet-metal-fabrication/production' }
         ]
       },
       promo: {
@@ -340,14 +340,27 @@ export default function Navbar() {
                   fontWeight: 700,
                   borderTop: category === 'Protolabs Network' ? '2px solid #90C34B' : 'none',
                   paddingTop: category === 'Protolabs Network' ? '0.5rem' : '0'
-                }}>{category}</h4>
+                }}>
+                  {category === 'Sheet Metal Fabrication' ? (
+                    <Link href="/services/sheet-metal-fabrication" onClick={() => setActiveMenu(null)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {category}
+                    </Link>
+                  ) : (
+                    category
+                  )}
+                </h4>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   {links.map((link: any) => (
                     <li key={link.title}>
-                      <Link href={link.href || "#"} style={{ 
-                        transition: 'var(--transition)',
-                        display: 'block'
-                      }} className="menu-link">
+                      <Link 
+                        href={link.href || "#"} 
+                        onClick={() => setActiveMenu(null)} 
+                        style={{ 
+                          transition: 'var(--transition)',
+                          display: 'block'
+                        }} 
+                        className="menu-link"
+                      >
                         <div style={{ fontSize: '0.9rem', fontWeight: link.desc ? 600 : 400, color: '#333', marginBottom: '0.2rem' }}>
                           {link.title}
                         </div>
