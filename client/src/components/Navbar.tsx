@@ -340,11 +340,26 @@ export default function Navbar() {
                   fontWeight: 700,
                   borderTop: category === 'Protolabs Network' ? '2px solid #90C34B' : 'none',
                   paddingTop: category === 'Protolabs Network' ? '0.5rem' : '0'
-                }}>{category}</h4>
+                }}>
+                  {category === 'Sheet Metal Fabrication' ? (
+                    <Link href="/services/sheet-metal-fabrication" onClick={() => setActiveMenu(null)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {category}
+                    </Link>
+                  ) : (
+                    category
+                  )}
+                </h4>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   {links.map((link: any) => (
                     <li key={link.title}>
-                      <Link href="#" style={{ 
+                      <Link href={
+                        link.title === 'Laser Cutting' ? "/services/sheet-metal-fabrication/laser-cutting" : 
+                        link.title === 'Punching' ? "/services/sheet-metal-fabrication/punching" : 
+                        link.title === 'Forming and Bending' ? "/services/sheet-metal-fabrication/forming-bending" : 
+                        link.title === 'Fabricated Assemblies' ? "/services/sheet-metal-fabrication/fabricated-assemblies" : 
+                        link.title === 'Prototyping' ? "/services/sheet-metal-fabrication/prototyping" : 
+                        link.title === 'Production' ? "/services/sheet-metal-fabrication/production" : "#"
+                      } onClick={() => setActiveMenu(null)} style={{ 
                         transition: 'var(--transition)',
                         display: 'block'
                       }} className="menu-link">
