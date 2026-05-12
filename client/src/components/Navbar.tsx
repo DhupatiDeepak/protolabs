@@ -19,13 +19,13 @@ export default function Navbar() {
     services: {
       columns: {
         'Injection Molding Service': [
-          { title: 'Plastic Injection Molding', desc: 'Molded plastic prototypes and production parts' },
-          { title: 'Liquid Silicone Rubber Molding', desc: 'LSR prototypes and production parts' },
-          { title: 'Overmolding', desc: 'Custom overmolded prototypes and production parts' },
-          { title: 'Insert Molding', desc: 'Custom insert molded prototypes and production parts' },
-          { title: 'Family and Multi-Cavity Molding', desc: 'Cost-effective tooling' },
-          { title: 'Prototyping', desc: 'Rapid prototyping' },
-          { title: 'Production', desc: 'Full-service production' }
+          { title: 'Plastic Injection Molding', desc: 'Molded plastic prototypes and production parts', href: '/services/injection-molding/plastic-injection-molding' },
+          { title: 'Liquid Silicone Rubber Molding', desc: 'LSR prototypes and production parts', href: '/services/injection-molding/liquid-silicone-rubber-molding' },
+          { title: 'Overmolding', desc: 'Custom overmolded prototypes and production parts', href: '/services/injection-molding/overmolding' },
+          { title: 'Insert Molding', desc: 'Custom insert molded prototypes and production parts', href: '/services/injection-molding/insert-molding' },
+          { title: 'Family and Multi-Cavity Molding', desc: 'Cost-effective tooling', href: '/services/injection-molding/family-multi-cavity' },
+          { title: 'Prototyping', desc: 'Rapid prototyping', href: '/services/injection-molding/prototyping' },
+          { title: 'Production', desc: 'Full-service production', href: '/services/injection-molding/production' }
         ],
         'CNC Machining Service': [
           { title: 'CNC Milling', desc: 'Machined prototypes and production parts' },
@@ -344,7 +344,7 @@ export default function Navbar() {
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   {links.map((link: any) => (
                     <li key={link.title}>
-                      <Link href="#" style={{ 
+                      <Link href={link.href || "#"} style={{ 
                         transition: 'var(--transition)',
                         display: 'block'
                       }} className="menu-link">
