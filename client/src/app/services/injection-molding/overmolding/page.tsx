@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SurfaceFinishTable from '@/components/SurfaceFinishTable';
 
 export default function Overmolding() {
   return (
@@ -170,6 +171,8 @@ export default function Overmolding() {
           With overmolding, the production of the substrate parts is a standard injection molding process involving an aluminum mold with no heating or cooling lines running through it. Cycle times are a bit longer, which allows our molders to monitor fill pressure, cosmetic concerns, and the basic quality of the parts. When the total run of substrate parts are molded, overmold tooling is then assembled to the press. The substrate parts are placed by hand into mold where each part is overmolded with either a thermoplastic or liquid silicone rubber material.
         </p>
       </section>
+
+      <SurfaceFinishTable />
 
       {/* CTA Section */}
       <section className="section" style={{ backgroundColor: '#f8f9fa', textAlign: 'center' }}>

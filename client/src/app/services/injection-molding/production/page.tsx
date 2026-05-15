@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SurfaceFinishTable from '@/components/SurfaceFinishTable';
 
 export default function Production() {
   return (
@@ -139,6 +140,8 @@ export default function Production() {
           ))}
         </div>
       </section>
+
+      <SurfaceFinishTable />
 
       {/* Final CTA */}
       <section className="section" style={{ backgroundColor: '#232d3b', color: '#fff', textAlign: 'center', padding: '8rem 0' }}>

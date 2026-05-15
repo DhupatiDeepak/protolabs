@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SurfaceFinishTable from '@/components/SurfaceFinishTable';
 
 export default function FamilyMultiCavityMolding() {
   return (
@@ -149,6 +150,8 @@ export default function FamilyMultiCavityMolding() {
           </p>
         </div>
       </section>
+
+      <SurfaceFinishTable />
 
       {/* CTA Section */}
       <section className="section" style={{ backgroundColor: '#f8f9fa', textAlign: 'center' }}>

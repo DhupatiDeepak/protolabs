@@ -28,12 +28,12 @@ export default function Navbar() {
           { title: 'Production', desc: 'Full-service production', href: '/services/injection-molding/production' }
         ],
         'CNC Machining Service': [
-          { title: 'CNC Milling', desc: 'Machined prototypes and production parts' },
-          { title: 'CNC Turning', desc: 'Machined prototypes and production parts' },
-          { title: 'Production Machining', desc: 'Full-service production' },
-          { title: 'Threading Options', desc: 'Custom threading' },
-          { title: 'Quality', desc: 'Digital manufacturing' },
-          { title: 'Finishing Options', desc: 'Various finishes' }
+          { title: 'CNC Milling', desc: 'Machined prototypes and production parts', href: '/services/cnc-machining/cnc-milling' },
+          { title: 'CNC Turning', desc: 'Machined prototypes and production parts', href: '/services/cnc-machining/cnc-turning' },
+          { title: 'Production Machining', desc: 'Full-service production', href: '/services/cnc-machining/production-machining' },
+          { title: 'Threading Options', desc: 'Custom threading', href: '/services/cnc-machining/threading-options' },
+          { title: 'Quality', desc: 'Digital manufacturing', href: '/services/cnc-machining/quality' },
+          { title: 'Finishing Options', desc: 'Various finishes', href: '/services/cnc-machining/finishing-options' }
         ],
         '3D Printing Service': [
           { title: 'Metal 3D Printing', desc: 'DMLS for functional metal parts' },
